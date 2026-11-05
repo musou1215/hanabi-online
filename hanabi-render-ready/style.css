@@ -32,3 +32,19 @@
 .card.hidden[draggable="true"]{cursor:grab;touch-action:pan-y}
 .card.hidden[draggable="true"]:active{cursor:grabbing}
 .card.hidden[draggable="true"]:hover{border-color:#93c5fd}
+
+/* Mobile: keep all five cards on a single row, including their notes. */
+@media (max-width: 600px) {
+  main { padding: 10px; }
+  .panel { padding: 12px; margin: 10px 0; }
+  .cards { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; width: 100%; }
+  .cards .card { width: 100%; min-width: 0; height: auto; aspect-ratio: 65 / 88; padding: 2px; }
+  .cards .card strong { font-size: clamp(20px, 7vw, 36px); }
+  .cards .hidden-symbol { font-size: clamp(20px, 7vw, 32px); }
+  .cards .card-hint-label { bottom: 2px; font-size: 11px; padding: 1px 3px; max-width: 95%; }
+  .notes { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; width: 100%; }
+  .notes input { width: 100%; min-width: 0; font-size: 12px; padding: 5px 2px; }
+  .stacks { gap: 5px; }
+  .stack { flex: 1; min-width: 0; padding: 8px 2px; }
+  .stack strong { font-size: 24px; }
+}
