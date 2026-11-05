@@ -1,0 +1,1 @@
+{"name":"hanabi-online","version":"0.2.0","private":true,"type":"module","scripts":{"dev":"concurrently \"vite --host 0.0.0.0\" \"node server.js\"","server":"node server.js","build":"vite build"},"dependencies":{"react":"^19.0.0","react-dom":"^19.0.0","vite":"^7.0.0","socket.io":"^4.8.1","socket.io-client":"^4.8.1","concurrently":"^9.1.2"}}
